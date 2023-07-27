@@ -1,3 +1,371 @@
-img {
-    background-color: black;
+@import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&family=Space+Grotesk:wght@300;400;500;600;700&display=swap');
+
+:root{
+    --yellow-color: #FFFF00;
+    --yellow-light: #F8F184;
+    --blue-color: #17587d;
+    --red-color: #b11313;
+    --black-color: #000;
+    --grey-color : #c4c4c4;
+    --white-color: #fff;
+    --gradient-white: #eddebf65;
+    --gradient-red: #8900096f;
+    --gradient-grey: #092536;
+
+
+
+}
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+h1 {
+    font-family: 'Rajdhani';
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 400;
+}
+button {
+    font-family: 'rajdhani';
+    font-size: 20px;
+    font-weight: 400;
+}
+
+
+
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+body{
+    background-color: rgb(0, 0, 0);
+    color: white;
+    font-family: 'Space Grotesk';
+    font-weight: 300;
+
+}
+
+.up-bar{
+    border-top: #c4c4c4 5px solid;
+    position: relative;
+    top: 132px;
+    left: 102px;
+}
+
+
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 40px;
+    
+}
+
+ul {
+    list-style: none;
+    font-weight:bold;
+}
+a {
+    color: var(--white-color);
+    font-size: 25px;
+    font-family: 'Rajdhani';
+    
+}
+
+
+nav ul a:hover{
+    color: var(--yellow-color)
+}
+.logo:hover{
+    filter: invert(4%) sepia(100%) saturate(1680%) hue-rotate(357deg) brightness(101%) contrast(103%);
+    
+}
+
+
+/*desing de la partie hero */
+#hero {
+    background-image: url(../Illustrations/Bathome1.png);
+    background-repeat: no-repeat;
+    height: 800px;
+    background-size: cover;
+}
+.content{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    margin: 0 auto;
+    padding-top: 250px;
+}
+#hero .titre{
+    margin: 20px;
+}
+.btn{
+    text-decoration: none;
+    color: var(--white-color);
+    font-size: 22px;
+    padding: 10px 40px;
+    margin-top: 10px;
+    background: linear-gradient(
+        80deg,var(--gradient-white),var(--gradient-red)
+    );
+    box-shadow: var(--black-color) 5px 5px 50px ;
+}
+
+.btn:hover{
+    opacity: 100%;
+    background-color: var(--white-color);
+}
+
+
+
+
+#hero .fleche{
+    display: block;
+    margin: 0 auto;
+    margin-top: 300px;
+}
+.scroll {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: fixed;
+    right: 80px;
+    top: 250px;
+}
+.scroll .social{
+margin-top: 15px;
+}
+
+/*desing de les sections batman nemesis allies */
+#batman-cinema, #allies, #nemesis{
+    margin-top: 40px;
+}
+.batman-personnage, .allies-personnage, .nemesis-personnage{
+    display: flex;
+    justify-content: space-between;
+
+}
+#batman-cinema .titre, #nemesis .titre, #allies .titre, #justice-league .titre, #multimedia .titre{
+    text-transform: uppercase;
+    font-weight: bold;
+    margin: 30px 0;
+
+}
+#batman-cinema .description, #nemesis .description, #allies .description, #justice-league .description{
+    margin-bottom: 40px;
+    text-align: justify;
+    width: 80%;
+}
+#batman-cinema .personnage-info, #nemesis .personnage-info, #allies .personnage-info{
+    text-align: center;
+}
+
+#nemesis span.icn-nemesis img{
+    width: 100px;
+}
+.icn-allies img{
+    width: 20%;
+    right: 100%;
+    float: right;
+}
+
+
+/*desing de section multimédia */
+
+#multimedia button{
+    position: relative;
+    top: 155px;
+    background :none;
+    border: none;
+}
+
+#multimedia button.right{
+    right: -90%;
+}
+#multimedia .yellow{
+    color: var(--yellow-color);
+}
+
+
+#multimedia .slider-multimedia{
+    display: flex;
+    width: 60%;
+    margin: 40px auto;
+}
+
+#multimedia .slider-image{
+    width: 100%;
+
+}
+
+#multimedia .slider-content{
+    padding: 15px;
+    background: linear-gradient(
+        80deg,var(--gradient-white),var(--gradient-grey)
+    )
+}
+
+/*bordure de Action et adventure*/
+#multimedia .slider-content{
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px ;
+}
+
+
+#multimedia p{
+    font-size: 14px;
+}
+
+/*design sur la partie du formulaire prenons contact*/
+#contact{
+    background: linear-gradient(
+        80deg,var(--gradient-white),var(--gradient-grey)
+    );
+    padding: 70px 0;
+}
+#contact .form{
+    width: 50%;
+    margin: 0 auto;
+}
+
+#contact h2{
+    text-align: center;
+    font-size: 32px;
+    margin-bottom: 32px;
+}
+
+#contact .titre{
+    display: block;
+    margin: 25px 0;
+}
+
+#contact .form input[type='email'], textarea{
+    display: block;
+    border-top: none;
+    border-right: none;
+    border-left: none;
+    width: 80%;
+    background-color: transparent;
+    padding: 10px 0;
+
+}
+
+#contact .news{
+    margin-top: 15px 0;
+    border-bottom: 2px solid rgb(120, 120, 120);
+}
+
+#contact .icon img{
+    transform: rotate(90deg);
+    width: 20px;
+}
+
+::placeholder{
+    color: #F8F184;
+
+}
+
+.btn-group{
+    padding: 10px;
+    display: flex;
+    justify-content: space-around;
+}
+.btngrp:hover{
+    opacity: 100%;
+    background-color: var(--white-color);
+}
+.form input[type='radio']{
+    opacity: 0;
+}
+
+.btn-group label{
+    cursor: pointer;
+    border: 2px solid;
+    padding: 10px;
+    border-image: linear-gradient(
+        70deg,grey,blue
+    )1;
+    font-size: 20px;
+}
+
+input[type='submit']{
+    display: block;
+    width: 230px;
+    margin: 25px auto;
+    padding: 15px 0;
+    cursor: pointer;
+}
+
+/*design de section citation*/
+#citation {
+    margin: 90px;
+}
+#citation .citation-carte{
+    text-align: center;
+    width: 50%;
+    margin: 0 auto;
+}
+
+#citation .citation-auteur{
+    padding-top: 30px;
+    font-size: 12px;
+    font-family: 'Rajdhani';
+}
+
+#citation .guillemet-close{
+    float: right;
+}
+
+
+/*design de footer*/
+footer{
+    margin-top: 162px;
+}
+
+footer .text-footer{
+    text-align: center;
+}
+footer .social-footer{
+    text-align: center;
+    margin: 50px 0;
+}
+footer .social-item{
+   padding: 15px;
+   text-decoration: none; 
+}
+
+.social-item:hover{
+    filter: invert(4%) sepia(100%) saturate(1680%) hue-rotate(357deg) brightness(101%) contrast(103%);
+}
+.social:hover{
+    filter: invert(4%) sepia(100%) saturate(1680%) hue-rotate(357deg) brightness(101%) contrast(103%);
+}
+.btmn:hover{
+    filter: invert(4%) sepia(100%) saturate(1680%) hue-rotate(357deg) brightness(101%) contrast(103%);
+}
+
+
+
+.btn-list{
+    display:flex;
+    flex-direction: column;
+    padding: 0px 40px;
+    margin-top: 0px;
+    background: linear-gradient(
+        10deg,var(--gradient-white),var(--gradient-grey));
+    border: none;
+    width: 90%;
+    ;
+    
+
+}
+.btn-list:hover{
+    opacity: 100%;
+    background-color: var(--white-color);
 }
